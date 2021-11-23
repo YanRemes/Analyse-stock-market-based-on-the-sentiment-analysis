@@ -6,7 +6,7 @@ discussion = pd.read_csv('/home/yan/PycharmProjects/pythonProject/wsb_comments.c
 discussion = discussion.drop_duplicates('text')
 discussion = discussion[discussion['text'].notnull()]
 
-API_key = '....'
+API_key = 'your key here'
 top = ['SRNE', 'CRSR', 'GME', 'AMC', 'TSLA', 'MVIS', 'SPCE', 'CLNE', 'AAPL', 'WKHS', 'RKT', 'CLF', 'NVDA', 'AMZN', 'VIAC', 'ASO', 'TH', 'DTE', 'ATH']
 ts = TimeSeries(key=API_key, output_format='csv')
 csvreader, _ = ts.get_daily(symbol=top)
